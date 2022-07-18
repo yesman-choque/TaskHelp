@@ -1,0 +1,10 @@
+{
+  "expo": {
+    "name": "Task_Help",
+    "slug": "Task_Help",
+    "version": "1.0.0",
+    "assetBundlePatterns": [
+      "**/*"
+    ]
+  }
+}
