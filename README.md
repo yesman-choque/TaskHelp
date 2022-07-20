@@ -1,6 +1,6 @@
 <div align="center">
    <a href="https://github.com/yesmanic/Task_Help">
-      <img src="#" alt="Logo" width="80" height="80">
+      <img src="https://user-images.githubusercontent.com/62268626/180069118-cf1938e6-73f5-4c2e-af34-759373f1a8b2.svg" alt="Logo" width="80" height="80">
    </a>
    <h3 align="center">Task Help</h3>
 
@@ -15,7 +15,7 @@
 This mobile app is a task manager to organize your tasks and improve your productivity. It is made with React Native, a library to develop native applications for Android and iOS, and Expo to easily build up and run the app.
 
 <div align="center">
-   <img src="#" alt="screenshot" height="300">
+   <img src="https://user-images.githubusercontent.com/62268626/180069254-ffd40ca0-0744-42f1-b33b-811a8446c1cb.png" alt="screenshot" height="300">
 </div>
 
 ### Built With
