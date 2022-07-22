@@ -1,20 +1,16 @@
 import { useState } from 'react'
-import { Heading, HStack, IconButton, Text, useTheme, VStack, FlatList } from "native-base"
-import { SignOut } from 'phosphor-react-native'
+import { Heading, HStack, IconButton, Text, useTheme, VStack, FlatList, Center } from "native-base"
+import { SignOut, ChatTeardropText } from 'phosphor-react-native'
 
 import Logo from '../assets/logo_secondary.svg'
 
 import { Filter } from '../components/Filter'
+import { Button } from '../components/Button'
 import { Order, OrderProps } from '../components/Order'
 
 export function Home() {
    const [statusSelected, setStatusSelected] = useState<'open' | 'closed'>('open')
-   const [orders, setOrders] = useState<OrderProps[]>([{
-      id: '123',
-      name: 'Task 1',
-      date: '18/07/2022 at 10:00',
-      status: 'open' 
-   }])
+   const [orders, setOrders] = useState<OrderProps[]>([])
 
    const { colors } = useTheme()
 
@@ -65,7 +61,20 @@ export function Home() {
                data={orders}
                keyExtractor={item => item.id}
                renderItem={({ item }) => <Order data={item}/>}
+               showsVerticalScrollIndicator={false}
+               contentContainerStyle={{paddingBottom: 100}}
+               ListEmptyComponent={() => (
+                  <Center>
+                     <ChatTeardropText size={40} color={colors.gray[300]}/>
+                     <Text color="gray.300" fontSize="xl" mt={6} textAlign="center">
+                        You have no tasks {'\n'} 
+                        {statusSelected === 'open' ? 'in progress' : 'done'}
+                     </Text>
+                  </Center>
+               )}
             />
+
+            <Button title="New task" />
          </VStack>
       </VStack>
    )
